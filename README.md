@@ -1,5 +1,19 @@
 # Algorithms in Software Development
-This repository contains a list of commonly used algorithms in software development. It serves as a quick reference for various algorithmic techniques.
+
+This repository serves as a comprehensive reference for commonly used algorithms in software development. Whether you're a beginner or an experienced developer, this list provides a quick overview of essential algorithms and their applications.
+
+## Table of Contents
+- [Sorting Algorithms](#sorting-algorithms)
+- [Searching Algorithms](#searching-algorithms)
+- [Graph Algorithms](#graph-algorithms)
+- [Tree Algorithms](#tree-algorithms)
+- [Dynamic Programming Algorithms](#dynamic-programming-algorithms)
+- [String Matching Algorithms](#string-matching-algorithms)
+- [Hashing Algorithms](#hashing-algorithms)
+- [Greedy Algorithms](#greedy-algorithms)
+- [Backtracking Algorithms](#backtracking-algorithms)
+- [Divide and Conquer Algorithms](#divide-and-conquer-algorithms)
+- [Version Tags](#version-tags)
 
 ## Sorting Algorithms
 - Bubble Sort
