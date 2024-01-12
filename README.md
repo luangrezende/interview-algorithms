@@ -13,7 +13,6 @@ This repository serves as a comprehensive reference for commonly used algorithms
 - [Greedy Algorithms](#greedy-algorithms)
 - [Backtracking Algorithms](#backtracking-algorithms)
 - [Divide and Conquer Algorithms](#divide-and-conquer-algorithms)
-- [Version Tags](#version-tags)
 
 ## Sorting Algorithms
 - Bubble Sort
