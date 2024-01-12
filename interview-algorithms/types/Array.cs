@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace interview_algorithms.types
 {
     public class MyArray
     {
         private int index;
-        private readonly int[] array;
+        private int[] array;
 
         public MyArray()
         {
@@ -37,6 +32,35 @@ namespace interview_algorithms.types
         public int Read(int key)
         {
             return array[key];
+        }
+
+        public void Fit()
+        {
+            int index = 0;
+            var arrayTemp = new int[array.Length];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] != 0)
+                {
+                    arrayTemp[index] = array[i];
+                    index++;
+                }
+            }
+
+            array = arrayTemp;
+        }
+
+        public void Resize(int size)
+        {
+            var arrayTemp = new int[size];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                arrayTemp[i] = array[i];
+            }
+
+            array = arrayTemp;
         }
     }
 }
