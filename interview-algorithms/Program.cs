@@ -9,123 +9,47 @@ namespace interview_algorithms
     {
         public static void Main()
         {
-            var test = new Solution2();
+            var test = new Solution();
 
-            var result = test.LengthOfLongestSubstring("pwwkew");
+            int[] nums1 = { 1, 3 };
+            int[] nums2 = { 2, 4 };
+
+            var result = test.FindMedianSortedArrays(nums1, nums2);
         }
 
         public class Solution
         {
-            public int LengthOfLongestSubstring(string text)
+            public double FindMedianSortedArrays(int[] nums1, int[] nums2)
             {
-                int index = 0;
-                int count = 0;
-                int countTemp = 0;
-                int countTempFor = 0;
-                char[] arrayTemp = new char[text.Length];
+                int totalLength = nums1.Length + nums2.Length;
+                int[] mergedArray = new int[totalLength];
 
-                for (int i = 0; i < text.Length; i++)
+                int i = 0, j = 0, k = 0;
+
+                while (i < nums1.Length && j < nums2.Length)
                 {
-                    Calculate(i, text, ref index, ref count, ref countTemp, ref countTempFor, ref arrayTemp);
+                    if (nums1[i] < nums2[j])
+                        mergedArray[k++] = nums1[i++];
+                    else
+                        mergedArray[k++] = nums2[j++];
                 }
 
+                while (i < nums1.Length)
+                    mergedArray[k++] = nums1[i++];
 
-                return count;
-            }
+                while (j < nums2.Length)
+                    mergedArray[k++] = nums2[j++];
 
-            private static void Calculate(
-                int countFor, 
-                string text, 
-                ref int index, 
-                ref int count, 
-                ref int countTemp, 
-                ref int countTempFor, 
-                ref char[] arrayTemp)
-            {
-                for (int i = countFor; i < text.Length; i++)
+                if (totalLength % 2 == 0)
                 {
-                    countTempFor = i;
-                    for (int j = 0; j < arrayTemp.Length; j++)
-                    {
-                        if (arrayTemp[j].ToString() == "\0")
-                            continue;
-
-                        if (arrayTemp[j] == text[i])
-                        {
-                            arrayTemp = new char[text.Length];
-                            countTemp = 0;
-                            index = 0;
-                            
-                            break;
-                        }
-                    }
-
-                    countTemp++;
-
-                    count = countTemp > count
-                       ? countTemp
-                       : count;
-
-                    arrayTemp[index] = text[i];
-                    index++;
+                    int middle1 = mergedArray[totalLength / 2 - 1];
+                    int middle2 = mergedArray[totalLength / 2];
+                    return (double)(middle1 + middle2) / 2;
                 }
-            }
-        }
-
-        public class Solution2
-        {
-            public int LengthOfLongestSubstring(string text)
-            {
-                int count = 0;
-
-                for (int i = 0; i < text.Length; i++)
+                else
                 {
-                    int result = Calculate(i, text);
-
-                    count = result > count
-                       ? result
-                       : count;
+                    return mergedArray[totalLength / 2];
                 }
-
-                return count;
-            }
-
-            private static int Calculate(
-                int countFor,
-                string text)
-            {
-                int count = 0;
-                int index = 0;
-                char target = text[countFor];
-                char[] arrayTemp = new char[text.Length];
-
-                for (int i = countFor + 1; i < text.Length; i++)
-                {
-                    arrayTemp[index] = text[i];
-                    index++;
-
-                    for (int j = 0; j < arrayTemp.Length; j++)
-                    {
-                        if (arrayTemp[j].ToString() == "\0")
-                            continue;
-
-                        if (arrayTemp[j] == target)
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            count++;
-                        }
-                    }
-
-                    //if (target != text[i])
-                    //    count++;
-                    //else
-                    //    break;
-                }
-
-                return count;
             }
         }
     }
