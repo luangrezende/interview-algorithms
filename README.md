@@ -17,8 +17,8 @@ A comprehensive collection of essential algorithms and data structures implement
 - **Well-documented Code**: Clear, readable implementations with comments
 - **Real Interview Problems**: LeetCode and common interview questions
 - **Educational Examples**: Learn algorithm complexities and use cases
-- **CI/CD Pipeline**: Automated testing and quality checks
-- **Multi-version Support**: Compatible with .NET 6.0, 7.0, and 8.0
+- **CI/CD Pipeline**: Automated build and testing
+- **.NET 6+ Support**: Modern C# implementation
 
 ## 🎯 Quick Start
 
@@ -182,15 +182,12 @@ Each algorithm includes execution time measurements to help you understand:
 ![macOS](https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
-### .NET Versions
+### .NET Version
 ![.NET 6](https://img.shields.io/badge/.NET-6.0-512BD4?style=flat-square&logo=dotnet)
-![.NET 7](https://img.shields.io/badge/.NET-7.0-512BD4?style=flat-square&logo=dotnet)
-![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat-square&logo=dotnet)
 
 ### Development Environment
 ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2022-5C2D91?style=flat-square&logo=visual-studio)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code)
-![JetBrains Rider](https://img.shields.io/badge/Rider-000000?style=flat-square&logo=rider&logoColor=white)
 
 ## 🧪 Testing
 

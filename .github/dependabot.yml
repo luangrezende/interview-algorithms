@@ -1,36 +1,15 @@
 version: 2
 updates:
-  # Enable version updates for .NET dependencies
+  # .NET dependencies
   - package-ecosystem: "nuget"
     directory: "/interview-algorithms"
     schedule:
       interval: "weekly"
-      day: "monday"
-      time: "09:00"
-      timezone: "America/Sao_Paulo"
     open-pull-requests-limit: 5
-    reviewers:
-      - "luangrezende"
-    assignees:
-      - "luangrezende"
-    commit-message:
-      prefix: "deps"
-      prefix-development: "deps-dev"
-      include: "scope"
 
-  # Enable version updates for GitHub Actions
+  # GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "monday"
-      time: "09:00"
-      timezone: "America/Sao_Paulo"
     open-pull-requests-limit: 3
-    reviewers:
-      - "luangrezende"
-    assignees:
-      - "luangrezende"
-    commit-message:
-      prefix: "ci"
-      include: "scope"
