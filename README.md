@@ -10,7 +10,7 @@
 
 A comprehensive collection of essential algorithms and data structures implementations in C#, perfect for technical interviews, competitive programming, and algorithm study.
 
-## 🚀 Features
+## Features
 
 - **Interactive Console Application**: Run and compare different algorithms
 - **Performance Benchmarking**: Execution time measurements for all algorithms
@@ -20,7 +20,7 @@ A comprehensive collection of essential algorithms and data structures implement
 - **CI/CD Pipeline**: Automated build and testing
 - **.NET 6+ Support**: Modern C# implementation
 
-## 🎯 Quick Start
+## Quick Start
 
 ### Prerequisites
 ![.NET](https://img.shields.io/badge/.NET-6.0%2B-512BD4?style=flat-square&logo=dotnet)
@@ -48,7 +48,7 @@ dotnet run
 ### Using GitHub Codespaces
 [![Open in GitHub Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-informational?style=flat-square&logo=github)](https://codespaces.new/luangrezende/interview-algorithms)
 
-## � Code Quality & Statistics
+## Code Quality & Statistics
 
 [![Code Quality](https://img.shields.io/codacy/grade/your-project-id?style=flat-square&logo=codacy)](https://app.codacy.com/gh/luangrezende/interview-algorithms)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/luangrezende/interview-algorithms?style=flat-square&logo=code-climate)](https://codeclimate.com/github/luangrezende/interview-algorithms)
@@ -56,7 +56,7 @@ dotnet run
 [![Languages](https://img.shields.io/github/languages/count/luangrezende/interview-algorithms?style=flat-square)](https://github.com/luangrezende/interview-algorithms)
 [![Top Language](https://img.shields.io/github/languages/top/luangrezende/interview-algorithms?style=flat-square)](https://github.com/luangrezende/interview-algorithms)
 
-## �📁 Project Structure
+## Project Structure
 
 ```
 interview-algorithms/
@@ -94,7 +94,7 @@ interview-algorithms/
     └── Array.cs                       # Dynamic array implementation
 ```
 
-## 🔧 Getting Started
+## Getting Started
 
 ### Prerequisites
 - .NET 6.0 or later
@@ -116,7 +116,7 @@ dotnet run --project interview-algorithms
 
 3. Use the interactive menu to explore different algorithm categories.
 
-## 📚 Algorithm Categories
+## Algorithm Categories
 
 ### 1. Sorting Algorithms
 | Algorithm | Time Complexity | Space Complexity | Stable | In-place | Best For |
@@ -161,21 +161,21 @@ dotnet run --project interview-algorithms
 - **Fractional Knapsack**: Maximize value with weight constraint
 - **Huffman Coding**: Optimal prefix-free encoding
 
-## 🎯 LeetCode Problems Included
+## LeetCode Problems Included
 
 1. **Two Sum** - Hash table solution
 2. **Find Median of Sorted Arrays** - Binary search approach
 3. **Longest Substring Without Repeating Characters** - Sliding window
 4. **Determine if String Halves Are Alike** - String manipulation
 
-## 📊 Performance Benchmarking
+## Performance Benchmarking
 
 Each algorithm includes execution time measurements to help you understand:
 - Real-world performance differences
 - Impact of input size on running time
 - Trade-offs between time and space complexity
 
-## 💻 Compatibility & Requirements
+## Compatibility & Requirements
 
 ### Supported Platforms
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white)
@@ -189,14 +189,14 @@ Each algorithm includes execution time measurements to help you understand:
 ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2022-5C2D91?style=flat-square&logo=visual-studio)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code)
 
-## 🧪 Testing
+## Testing
 
 The project includes comprehensive test cases and performance comparisons. Each algorithm can be tested with:
 - Random data sets
 - Edge cases (empty, single element, already sorted)
 - Different input sizes for complexity analysis
 
-## 🤝 Contributing
+## Contributing
 
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=flat-square)
 ![Good First Issue](https://img.shields.io/badge/Good%20First%20Issue-Available-blue?style=flat-square)
@@ -204,21 +204,21 @@ The project includes comprehensive test cases and performance comparisons. Each 
 
 Contributions are welcome! Please feel free to submit a Pull Request. 
 
-### 🎯 How to Contribute
+### How to Contribute
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-algorithm`)
 3. **Commit** your changes (`git commit -m 'Add amazing algorithm'`)
 4. **Push** to the branch (`git push origin feature/amazing-algorithm`)
 5. **Open** a Pull Request
 
-### 💡 Ideas for Contributions
+### Ideas for Contributions
 - ![Algorithm](https://img.shields.io/badge/Add-Algorithms-success?style=flat-square) Additional algorithms (A*, Floyd-Warshall, etc.)
 - ![LeetCode](https://img.shields.io/badge/Add-LeetCode-orange?style=flat-square) More LeetCode problems
 - ![Visualization](https://img.shields.io/badge/Add-Visualizations-purple?style=flat-square) Algorithm visualizations
 - ![Tests](https://img.shields.io/badge/Add-Tests-blue?style=flat-square) Unit tests and benchmarks
 - ![Documentation](https://img.shields.io/badge/Improve-Docs-green?style=flat-square) Documentation improvements
 
-## 📖 Learning Resources
+## Learning Resources
 
 This implementation is designed for learning. Each algorithm includes:
 - Time and space complexity analysis
@@ -226,18 +226,18 @@ This implementation is designed for learning. Each algorithm includes:
 - When to use each algorithm
 - Common interview variations
 
-## 🏆 Interview Preparation
+## Interview Preparation
 
 This repository covers the most commonly asked algorithmic concepts in technical interviews:
 - **FAANG Companies**: Sorting, searching, DP, graphs, trees
 - **System Design**: Understanding algorithm trade-offs
 - **Coding Challenges**: LeetCode-style problems with optimized solutions
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 👨‍💻 Author & Community
+## Author & Community
 
 **Luan Rezende**
 
@@ -245,14 +245,14 @@ This project is open source and available under the [MIT License](LICENSE).
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/luangrezende)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:luan@example.com)
 
-### 🌟 Support This Project
+### Support This Project
 If this project helps you with your interview preparation, please consider:
 
 [![Star](https://img.shields.io/github/stars/luangrezende/interview-algorithms?style=social)](https://github.com/luangrezende/interview-algorithms/stargazers)
 [![Fork](https://img.shields.io/github/forks/luangrezende/interview-algorithms?style=social)](https://github.com/luangrezende/interview-algorithms/fork)
 [![Watch](https://img.shields.io/github/watchers/luangrezende/interview-algorithms?style=social)](https://github.com/luangrezende/interview-algorithms/watchers)
 
-## 📊 Project Stats
+## Project Stats
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/luangrezende/interview-algorithms?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/luangrezende/interview-algorithms?style=flat-square)
