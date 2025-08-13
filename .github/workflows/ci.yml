@@ -1,0 +1,109 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        dotnet-version: ['6.0.x', '7.0.x', '8.0.x']
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET ${{ matrix.dotnet-version }}
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+        
+    - name: Restore dependencies
+      run: dotnet restore interview-algorithms/
+      
+    - name: Build
+      run: dotnet build interview-algorithms/ --no-restore --configuration Release
+      
+    - name: Test
+      run: dotnet test interview-algorithms/ --no-build --configuration Release --verbosity normal
+      
+    - name: Upload coverage reports
+      if: matrix.dotnet-version == '6.0.x'
+      uses: codecov/codecov-action@v3
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+  code-quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '6.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore interview-algorithms/
+      
+    - name: Format check
+      run: dotnet format interview-algorithms/ --verify-no-changes --verbosity diagnostic
+      
+    - name: Security scan
+      uses: securecodewarrior/github-action-add-sarif@v1
+      if: false # Disable for now, enable when needed
+      with:
+        sarif-file: 'security-scan-results.sarif'
+
+  release:
+    name: Release
+    needs: [build, code-quality]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '6.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore interview-algorithms/
+      
+    - name: Build Release
+      run: dotnet build interview-algorithms/ --configuration Release --no-restore
+      
+    - name: Publish
+      run: dotnet publish interview-algorithms/ --configuration Release --no-build --output ./publish
+      
+    - name: Create Release
+      if: contains(github.event.head_commit.message, '[release]')
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ github.run_number }}
+        release_name: Release v${{ github.run_number }}
+        body: |
+          ## Changes in this Release
+          
+          ${{ github.event.head_commit.message }}
+          
+          ## Artifacts
+          - Built with .NET 6.0
+          - Tested across multiple .NET versions
+          - Ready for production use
+        draft: false
+        prerelease: false

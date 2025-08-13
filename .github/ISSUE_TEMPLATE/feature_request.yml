@@ -1,0 +1,44 @@
+---
+name: Feature Request
+about: Suggest a new algorithm or improvement
+title: '[FEATURE] '
+labels: ['enhancement', 'needs-triage']
+assignees: ['luangrezende']
+---
+
+## Feature Description
+A clear and concise description of what you want to happen.
+
+## Algorithm Details
+**Algorithm Name:** 
+**Time Complexity:** 
+**Space Complexity:** 
+**Category:** 
+
+## Educational Value
+Explain why this algorithm would be valuable for interview preparation or learning.
+
+## Use Cases
+Describe the real-world applications or interview scenarios where this algorithm is useful.
+
+## References
+- [ ] Textbook reference
+- [ ] Research paper
+- [ ] LeetCode problem
+- [ ] Other online resource
+
+**Links:** 
+
+## Implementation Considerations
+- [ ] Multiple approaches (recursive, iterative, etc.)
+- [ ] Optimization variants
+- [ ] Performance benchmarking
+- [ ] Edge case handling
+
+## Additional Context
+Add any other context, examples, or screenshots about the feature request here.
+
+## Priority
+- [ ] High - Core interview algorithm
+- [ ] Medium - Common in some companies
+- [ ] Low - Nice to have for completeness
